@@ -1,7 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhl7t5kghom22"]
+[gd_scene load_steps=4 format=3 uid="uid://dhl7t5kghom22"]
 
 [ext_resource type="Script" uid="uid://cu6ni2ux81iw8" path="res://addons/SlimeVRIntegration/SlimeVRInterface.cs" id="1_o03xg"]
+[ext_resource type="Script" uid="uid://c6r3cvnn8a673" path="res://addons/SlimeVRIntegration/SlimeVRTracker.cs" id="2_mk0tt"]
 
-[node name="SlimeVRInterface" type="Node"]
+[sub_resource type="SphereMesh" id="SphereMesh_mk0tt"]
+radius = 0.1
+height = 0.2
+
+[node name="Main" type="Node3D"]
+
+[node name="SlimeVRInterface" type="Node" parent="."]
 script = ExtResource("1_o03xg")
 metadata/_custom_type_script = "uid://cu6ni2ux81iw8"
+
+[node name="CharacterOrigin" type="Node3D" parent="."]
+
+[node name="SlimeVRTracker" type="Node3D" parent="CharacterOrigin" node_paths=PackedStringArray("Interface")]
+script = ExtResource("2_mk0tt")
+TrackerName = "LEFT_HAND"
+Interface = NodePath("../../SlimeVRInterface")
+metadata/_custom_type_script = "uid://c6r3cvnn8a673"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterOrigin/SlimeVRTracker"]
+mesh = SubResource("SphereMesh_mk0tt")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0943556)

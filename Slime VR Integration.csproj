@@ -1,8 +1,21 @@
 <Project Sdk="Godot.NET.Sdk/4.5.1">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>SlimeVRIntegration</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LucHeart.CoreOSC" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="addons\SlimeVRIntegration\submodules\Google.FlatBuffers.dll">
+      <HintPath>Google.FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="addons\\SlimeVRIntegration\\submodules\\SlimeVR-SolarXR-Protocol.dll">
+      <HintPath>SlimeVR-SolarXR-Protocol.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

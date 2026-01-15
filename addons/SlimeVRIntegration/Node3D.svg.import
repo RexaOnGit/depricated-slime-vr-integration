@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3owqeovotvg4"
-path="res://.godot/imported/Node.svg-fa266c818cbdc121a8f18a871634cff3.ctex"
+uid="uid://dnp6bw2tgr8wg"
+path="res://.godot/imported/Node3D.svg-6e7c1971cf5c96ec1ee8ed77663a27dc.ctex"
 metadata={
 "has_editor_variant": true,
 "vram_texture": false
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://addons/SlimeVRIntegration/Node.svg"
-dest_files=["res://.godot/imported/Node.svg-fa266c818cbdc121a8f18a871634cff3.ctex"]
+source_file="res://addons/SlimeVRIntegration/Node3D.svg"
+dest_files=["res://.godot/imported/Node3D.svg-6e7c1971cf5c96ec1ee8ed77663a27dc.ctex"]
 
 [params]
 
